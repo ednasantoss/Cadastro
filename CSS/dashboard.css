@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    user-select: none;
+    scrollbar-width: none;
+}
+
+body {
+    background-color: #008080;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 0 40px;
+    height: 70px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.nav-logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: black;
+}
+
+.nav-links button:hover {
+    color: blue;
+}
+
+
+.content {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.modulo-tela {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.card-formulario {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background: #B0E0E6;
+    box-shadow: 0 10px 20px #080e0e;
+}
+
+.linha-dupla {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input,
+select,
+textarea {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 500px;
+}
+
+.btn-salvar {
+    background-color: lightblue;
+    color: black;
+    padding: 15px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-salvar:hover {
+    background-color: #4169E1;
+}
+
+
+.perfil-container {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    background-color: lightblue;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+     border-radius: 8px;
+    overflow: hidden;
+}
+
+.dropdown-content button {
+    padding: 15px 25px;
+    border: none;
+    background: none;
+    width: 100%;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.dropdown-content button:hover {
+    background-color: #4169E1;
+}
+
+.btn-perfil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 70%;
+    cursor: pointer;
+    transition: 0.3s ease;
+    position: relative;
+    background-color: lightblue;
+}
+
+.btn-perfil:hover {
+    color: black;
+    background-color: #4169E1;
+    transform: scale(1.05);
+}
+
+.btn-perfil {
+    font-size: 30px;
+    color: #4169E1;
+}
+
+.h1 {
+    text-align: center;
+    padding: 13px;
+    text-decoration: underline;
+}
+
+.p {
+    text-align: center;
+    padding: 13px;
+    text-decoration: underline;
+}
+
+.h3{
+    padding: 14px;
+    text-decoration: underline;
+}
+
+.table-listagem {
+    border-collapse: collapse;
+    background-color: #B0E0E6;
+}
+
+.table-listagem thead th {
+    padding: 10px 14px;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 2px;
+
+}
+
+
+.table-listagem tbody td {
+    padding: 10px 14px;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin: 2px;
+
+}
+
+.campo{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 105%; 
+    gap: 10px;
+}

@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+body:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: lightblue;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(60%);
+    z-index: -1;
+}
+
+main {
+    display: flex;
+    flex: 1;
+}
+
+.leftContainer {
+    display: flex;
+    flex: 6;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(60%);
+    z-index: -1;
+}
+
+.rightContainer {
+    display: flex;
+    flex: 4;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10pX;
+
+}
+
+form {
+    padding: 40px;
+    border-radius: 7px;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0px 15px 15px 15px rgba(97, 96, 96, 0.2);
+    animation: show 3s ease;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+input {
+    padding: 5px;
+    margin: 5px;
+    width: 20rem;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid lightblue;
+}
+
+input:valid {
+    border-bottom: 2px solid lightblue;
+}
+
+input:focus {
+    border-bottom: 1px solid rgb(43, 43, 43);
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    transition: 1s;
+}
+
+.grupoLabelInput {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+button {
+    margin-top: 40px;
+    align-self: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(99, 99, 99);
+}
+
+.button-cadastrados {
+    margin-top: 10px;
+    align-self: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    color: white;
+    font-weight: bold;
+    background-color: #941111;
+}
+
+button:hover {
+    background-color: rgb(19, 96, 121);
+    color: black;
+    transition: 1s;
+}
+
+h1 {
+    margin-bottom: 30px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(99, 99, 99);
+    text-decoration: wavy underline;
+}
+
+.inputs {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: 600;
+    font-size: 12px;
+    padding-left: 5px;
+    color: #474747;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+    color: white;
+    font-weight: 600;
+    background-color: rgb(19, 96, 121);
+}
+
+.help {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    bottom: 20px;
+    right: 20px;
+    padding: 0px;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    background-color: rgb(32, 152, 192);
+    border-radius: 100px;
+    color: white;
+    overflow: hidden;
+
+}
+
+.help:hover {
+    background-color: rgb(19, 96, 121);
+    color: white;
+    transition: 1s;
+    cursor: pointer;
+    width: 51px;
+    height: 51px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    background-color: white;
+    padding: 30px;
+    border-radius: 7px;
+    text-align: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+/* o "*" é usado para selecionar todos os elementos */

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/login.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <script src="/JS/authentication.js"></script>
+    <script src="/JS/login.js"></script>
+    <title>Sistema de Login</title>
+</head>
+
+<body>
+    <div id="overlay" class="overlay" style="display: none;">
+        <div class="modal">
+            <p id="mensagem"></p>
+            <button onclick="fecharOverlay()">Fechar</button>
+        </div>
+    </div>
+
+    <main>
+        <div class="leftContainer"></div>
+        <div class="rightContainer">
+            <form id="form-login" onsubmit="login(event)">
+                <h1>
+                    Sistema de Login
+                </h1>
+                <div class="inputs">
+                    <div class="grupoLabelInput">
+                        <label for="input-email">Email:<i class="bx bxs-envelope"></i></label>
+                        <input id="input-email" placeholder="Digite seu email" type="email" required>
+
+                    </div>
+                    <div class="grupoLabelInput">
+                        <label for="input-senha">Senha:<i class="bx bxs-lock-alt"></i></label>
+                        <input id="input-senha" placeholder="Digite sua senha" type="password" required>
+                    </div>
+                </div>
+                <button id="btn-login" type="submit">
+                    Entrar
+                </button>
+
+            </form>
+        </div>
+    </main>
+
+    <button id="btn-help" class="help" onclick="showHelpMessage()">
+        <i class="bx bxs-help-circle"></i>
+    </button>
+    <footer>
+        Copywright 2026 © Todos os direitos reservados
+    </footer>
+
+
+</body>
+
+</html>
+
+
+
+
+<!--main é o conteudo principal desse formulario-->

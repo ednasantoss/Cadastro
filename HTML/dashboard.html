@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Controle dos Atletas</title>
+    <link rel="stylesheet" href="../CSS/dashboard.css">
+    <script src="../JS/authentication.js"></script>
+    <script src="../JS/dashboard.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-logo">Painel de Controle de Atletas</div>
+
+            <div class="nav-links">
+                <button onclick="mostrarSecao('cadastro')">Cadastrar</button>
+                <button onclick="mostrarSecao('listagem')">Listar</button>
+            </div>
+
+            <div class="perfil-container">
+                <button class="btn-perfil" onclick="abrirFecharMenu()">👤</button>
+                <div id="menu-dropdown" class="dropdown-content">
+                    <button onclick="logout()">Sair do Sistema</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main class="content">
+
+        <section id="secao-listagem" class="modulo-tela">
+            <div class="container-listagem">
+                <h1 class="h1">Atletas Cadastrados</h1>
+                <table class="table-listagem" id="table-atletas">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>ID ou Passaporte</th>
+                            <th>Nacionalidade</th>
+                            <th>Data de Nascimento</th>
+                            <th>Modalidade</th>
+                            <th>Tipo Sanguíneo</th>
+                            <th>Gênero</th>
+                            <th>Problemas de Saúde</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela-atletas">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="secao-cadastro" class="modulo-tela">
+            <div>
+                <h1 class="h1">Registrar Novo Atleta</h1>
+                <p>Preencha os dados abaixo para o prontuário esportivo.</p>
+            </div>
+
+            <form id="form-atleta" onsubmit="salvarAtleta(event)">
+                <div class="card-formulario">
+                    <h3 class="h3">Informações Básicas</h3>
+                    <div class="campo">
+                        <label>Nome do Atleta</label>
+                        <input id="atleta-nome" type="text" placeholder="Nome completo" required>
+                    </div>
+                    <div class="linha-dupla">
+                        <div class="campo">
+                            <label for="atleta-id">ID ou Passaporte</label>
+                            <input id="atleta-id" type="text" placeholder="Digite o documento" required>
+                        </div>
+                        <div class="campo">
+                            <label for="atltea-nacionalidade">Nacionalidade</label>
+                            <input id="atleta-nacionalidade" type="text" placeholder="Digite a sua Nacionalidade"
+                                required>
+                        </div>
+                        <div class="campo">
+                            <label for="atleta-genero">Gênero</label>
+                            <input id="atleta-genero" placeholder="Gênero" type="text" required>
+
+                        </div>
+                        <div class="campo">
+                            <label>Nascimento</label>
+                            <input id="atleta-data" type="date" required>
+                        </div>
+                    </div>
+
+                    <h3 class="h3">Ficha Técnica e Saúde</h3>
+                    <div class="linha-dupla">
+                        <div class="campo">
+                            <label>Modalidade</label>
+                            <input id="atleta-esporte" type="text" placeholder="Ex: Natação" required>
+                        </div>
+                        <div class="campo">
+                            <label>Tipo Sanguíneo</label>
+                            <select id="atleta-sangue">
+                                <option value="">Selecione</option>
+                                <option value="A+">A+</option>
+                                <option value="O+">O+</option>
+                                <option value="B+">B+</option>
+                                <option value="AB+">AB+</option>
+                                <option value="AB-">AB-</option>
+                                <option value="B-">B-</option>
+                                <option value="A-">A-</option>
+                                <option value="O-">O-</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="campo">
+                        <label>Problemas de Saúde</label>
+                        <textarea id="atleta-problemasSaude" placeholder="Caso não tenha, digite 'Nenhum'"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-salvar">Finalizar Cadastro</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
