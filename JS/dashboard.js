@@ -23,7 +23,6 @@ function mostrarSecao(secaoDesejada) {
     }
 }
 
-
 function abrirFecharMenu() {
     const menu = document.getElementById('menu-dropdown');
     menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
@@ -49,10 +48,19 @@ function salvarAtleta(event) {
     listaAtletas.push(novoAtleta);
     localStorage.setItem('atletas', JSON.stringify(listaAtletas));
 
-    alert("Cadastrado com sucesso!");
     let form = document.getElementById("form-atleta");
     form.reset();
     carregarLista(); //Toda vez que salvo um dado
+    mostrarModal();
+}
+
+function mostrarModal() {
+    const modal = document.getElementById('meuModal');
+    modal.classList.add('show');
+
+    document.getElementById('closeBtn').onclick = () => {
+        modal.classList.remove('show');
+    };
 }
 
 function carregarLista() {

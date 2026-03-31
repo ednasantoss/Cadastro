@@ -29,6 +29,13 @@
         </nav>
     </header>
 
+    <div id="meuModal" class="modal-overlay">
+        <div class="modal-content">
+            <p>Cadastrado com sucesso!</p>
+            <button id="closeBtn" class="button-cadastro">OK</button>
+        </div>
+    </div>
+
 
     <main class="content">
 
@@ -79,8 +86,13 @@
                         </div>
                         <div class="campo">
                             <label for="atleta-genero">Gênero</label>
-                            <input id="atleta-genero" placeholder="Gênero" type="text" required>
-
+                            <select id="atleta-genero" placeholder="Gênero" type="text" required>
+                                <option value="">Selecione</option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Feminino">Feminino</option>
+                                <option value="Não-Binário">Não-Binário</option>
+                                <option value="Outro">Outro</option>
+                            </select>
                         </div>
                         <div class="campo">
                             <label>Nascimento</label>
@@ -120,4 +132,5 @@
         </section>
     </main>
 </body>
+
 </html>

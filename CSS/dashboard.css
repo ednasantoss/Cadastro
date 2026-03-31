@@ -186,6 +186,7 @@ textarea {
     text-transform: uppercase;
     letter-spacing: 3px;
     margin: 2px;
+    border-left: #055757 solid 1px;
 
 }
 
@@ -196,6 +197,8 @@ textarea {
     font-size: 12px;
     letter-spacing: 3px;
     margin: 2px;
+    border-top: #055757 solid 3px;
+    border-left: #008080 solid 1px;
 
 }
 
@@ -207,4 +210,49 @@ textarea {
     justify-content: space-between;
     width: 105%; 
     gap: 10px;
+}
+
+.modal-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s;
+  z-index: 1000;
+}
+
+.modal-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  position: fixed;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 400px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.modal-overlay.show 
+.modal-content {
+  transform: translateY(0);
+}
+
+.button-cadastro {
+  background-color: lightblue;
+  color: black;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.button-cadastro:hover {
+  background-color: #4169E1;
 }
