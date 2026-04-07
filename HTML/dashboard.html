@@ -104,7 +104,7 @@
                     <div class="linha-dupla">
                         <div class="campo">
                             <label>Modalidade</label>
-                            <input id="atleta-esporte" type="text" placeholder="Ex: Natação" required>
+                            <input id="atleta-modalidade" type="text" placeholder="Ex: Natação" required>
                         </div>
                         <div class="campo">
                             <label>Tipo Sanguíneo</label>
@@ -130,6 +130,49 @@
                 </div>
             </form>
         </section>
+
+        <form id="editar" class="editar" onsubmit="salvarEdicaoAtleta(event)" style="display: none;">
+            <h1 class="titulo">Editar Atleta</h1>
+            <h4 class="subtitulo">
+                Dados Pessoais
+            </h4>
+            <div class="grupoLabelInput">
+                <label for="edit-nome-atleta">Nome Completo</label>
+                <input id="edit-nome-atleta" placeholder="digite o nome completo" type="text" required>
+            </div>
+            <div class="linha">
+                <div class="grupoLabelInput">
+                    <label for="edit-nacionalidade">Nacionalidade</label>
+                    <input id="edit-nacionalidade" placeholder="Nacionalidade" type="text" required>
+                </div>
+                <div class="grupoLabelInput">
+                    <label for="edit-modalidade">Modalidade</label>
+                    <input id="edit-modalidade" placeholder="Modalidade" type="text" required>
+                </div>
+            </div>
+            <div class="linha">
+                <div class="grupoLabelInput">
+                    <label for="edit-genero">Gênero</label>
+                    <input id="edit-genero" placeholder="Gênero" type="text" required>
+                </div>
+            </div>
+            <h4 class="subtitulo">Dados Médicos</h4>
+            <div class="linha">
+            </div>
+            <div class="grupoLabelInput">
+                <label for="edit-problemasSaude">Problemas de Saúde</label>
+                <input id="edit-problemasSaude" placeholder="Ex: Cirurgia na clavícula, pedra nos rins" type="text"
+                    required>
+            </div>
+            <div class="linha">
+                <button class="button-default" type="submit">
+                    Atualizar
+                </button>
+                <button type="button" class="button-default dark-blue" onclick="mostrarSecao('listagem')">
+                    Voltar
+                </button>
+            </div>
+        </form>
     </main>
 </body>
 

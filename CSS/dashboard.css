@@ -256,3 +256,18 @@ textarea {
 .button-cadastro:hover {
   background-color: #4169E1;
 }
+
+.editar {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    background: #B0E0E6;
+    box-shadow: 0 10px 20px #080e0e;
+}
+
+ .btn-excluir {
+    margin-top: 0;
+    width: auto;
+    padding: 10px;
+    font-size: 12px;
+}
